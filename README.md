@@ -62,7 +62,7 @@ I specialize in building responsive web applications and automating workflows, w
 ### 📊 GitHub Stats & Activity
 
 <p align="center">
-  <img src="https://github.com/drimmononline/drimmononline/blob/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake" />
+  <img src="https://github.com/drimmononline/drimmononline/blob/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" />
 </p>
 
 ---
