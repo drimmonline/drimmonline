@@ -16,9 +16,6 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Generate Snake SVG
         uses: Platane/snk@v3
         with:
@@ -27,8 +24,10 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Push Snake SVG to main
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Push Snake SVG to output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
-          commit_message: "chroma: update contribution snake animation [skip ci]"
-          file_pattern: "dist/*.svg"
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
